@@ -21,7 +21,7 @@ def run_pca(window=10,stride=10,pca_type = 'pca1'):
 
     :param window: 滑动窗口大小，默认为10
     :param stride: 步长大小，默认为10
-    :param pca_type: 调用哪一个函数，默认为pca1（自己写的）
+    :param pca_type: 调用哪一个函数，默认为pca1（自己写的）,只能输入'pca1'或者'pca2'
     :return:无
     '''
     bostons = load_boston()
