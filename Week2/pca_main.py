@@ -5,12 +5,25 @@ import matplotlib.pyplot as plt
 import numpy as np
 import os
 
+'''
+run_pca:按照题目要求进行滑动窗口、步长选择，可以选择调用pca1（自己完成）或者pca2（调包完成）
+paint_stack:绘制并保存带状图（含折线图）
+paint_bar：绘制并保存柱状图
+'''
+
 IMAGE_PATH = './Image'
 if(not os.path.exists(IMAGE_PATH)):
     os.mkdir(IMAGE_PATH)
 
 
 def run_pca(window=10,stride=10,pca_type = 'pca1'):
+    '''
+
+    :param window: 滑动窗口大小，默认为10
+    :param stride: 步长大小，默认为10
+    :param pca_type: 调用哪一个函数，默认为pca1（自己写的）
+    :return:无
+    '''
     bostons = load_boston()
     data = bostons['data'][:500, -6:]
     #print(bostons.keys())
@@ -31,6 +44,12 @@ def run_pca(window=10,stride=10,pca_type = 'pca1'):
     #print(pc_np.shape)
 
 def paint_stack(data,pca_type):
+    '''
+
+    :param data: 需要绘制图像的数据（作为y轴），大小为1维，x轴从0开始（在函数内部生成）
+    :param pca_type:调用的函数名，用来给图像命名
+    :return:无，但是会存储图像
+    '''
     pc1=data[0]
     pc2=data[1]
     pc1_2 = np.add(pc1,pc2)
@@ -58,6 +77,12 @@ def paint_stack(data,pca_type):
     plt.show()
 
 def paint_bar(data,pca_type):
+    '''
+
+    :param data: 需要绘制图像的数据（作为y轴），大小为1维，x轴从0开始（在函数内部生成）
+    :param pca_type:调用的函数名，用来给图像命名
+    :return:无，但是会存储图像
+    '''
     pc1=data[0]
     pc2=data[1]
     x = np.array([i for i in range(len(pc1))])
@@ -80,10 +105,10 @@ def paint_bar(data,pca_type):
     #print(x,data)
     plt.show()
 
-
-
-run_pca()
-run_pca(pca_type='pca2')
+#main函数
+if __name__=='__main__':
+    run_pca()
+    run_pca(pca_type='pca2')
 
 
 

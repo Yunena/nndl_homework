@@ -1,6 +1,17 @@
 import numpy as np
+'''
+pca1：由自己调用numpy函数完成
+'''
+
 
 def pca1(data,n_component=2):
+    '''
+
+    :param data: array, 大小为 (n_examples,n_features),n_examples是用例个数， n_features 是特征个数
+    :param n_component: int,降维维数，默认输入为2
+    :return:array, 返回前n个排好序的信息占比，n为输入的n_component
+    '''
+
     #data should be 2D
     data_T = data.T #transpose
     dim = len(data_T)
