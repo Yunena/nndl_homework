@@ -11,3 +11,5 @@ Since this is only my solution to homework so it may not be perfect, if you foun
 Have a happy term.
 
 ## UPLOADED
+### Week 2
+- PCA
