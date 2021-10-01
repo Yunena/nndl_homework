@@ -19,4 +19,7 @@ Image文件夹中即为生成的图片展示。
 求f(x)=x^3+y^3-3xy的极小值
 
 ### 文件解释
-起来再说吧顺便把LaTeX处理了
+1. grad_des.py:梯度下降法
+2. newton_des.py:牛顿法
+3. des_main.py:实现了绘图并保存
+4. functions.py:本次针对的函数
