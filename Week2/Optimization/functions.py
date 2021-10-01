@@ -26,7 +26,7 @@ def f_xx(x,y):
     return 6*x
 
 def f_xy(x,y):
-    return 3
+    return -3
 
 def f_yy(x,y):
     return 6*y
