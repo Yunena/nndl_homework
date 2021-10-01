@@ -1,5 +1,18 @@
 import numpy as np
 
+'''
+f(x,y):原函数
+f_x(x,y):对x求偏导
+f_y(x,y):对y偏导
+f_xx(x,y):xx二阶导
+f_xy(x,y):xy/yx二阶导
+f_yy(x,y):yy二阶导
+grad(x,y):梯度矩阵
+hessian(x,y):Hessian矩阵
+
+
+'''
+
 def f(x,y):
     return x**3+y**3-3*x*y
 

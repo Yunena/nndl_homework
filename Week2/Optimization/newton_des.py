@@ -1,7 +1,15 @@
 import numpy as np
 from functions import *
 
+'''
+newton_des:牛顿法实现
+'''
+
 def newton_des(epoch=100):
+    '''
+    epoch:迭代次数，默认为100
+    return: 迭代过程中的位置变化（自变量向量X和目标值y）
+    '''
     init_X=np.random.rand(2)
     print('Init:',init_X)
     X_list=[]

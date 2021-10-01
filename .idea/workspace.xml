@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b61158aa-9a28-4489-947f-0812fd7379db" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Week2/Optimization/functions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week2/Optimization/grad_des.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week2/PCA/pca_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Week2/PCA/pca_main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week2/Optimization/des_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Week2/Optimization/des_main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week2/Optimization/functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Week2/Optimization/functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week2/Optimization/grad_des.py" beforeDir="false" afterPath="$PROJECT_DIR$/Week2/Optimization/grad_des.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week2/Optimization/newton_des.py" beforeDir="false" afterPath="$PROJECT_DIR$/Week2/Optimization/newton_des.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +173,8 @@
       <option name="presentableId" value="Default" />
       <updated>1632987456769</updated>
       <workItem from="1632987461798" duration="5674000" />
-      <workItem from="1632993202265" duration="25050000" />
+      <workItem from="1632993202265" duration="25182000" />
+      <workItem from="1633059799395" duration="2499000" />
     </task>
     <servers />
   </component>
