@@ -10,6 +10,7 @@ Image文件夹中即为生成的图片展示。
 1. pca1_by_myself.py:由自己使用numpy实现
 2. pca2_by_package.py:调用sklearn的PCA实现
 3. pca_main.py:实现了绘图并保存
+4. standardstep.py:对数据进行标准化
 
 
 

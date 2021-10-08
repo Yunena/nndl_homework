@@ -1,6 +1,7 @@
 from sklearn.datasets import load_boston
 from pca1_by_myself import pca1
 from pca2_by_package import pca2
+from standardstep import standardstep
 import matplotlib.pyplot as plt
 import numpy as np
 import os
@@ -43,6 +44,64 @@ def run_pca(window=10,stride=10,pca_type = 'pca1'):
     #print(pc_np)
     #print(pc_np.shape)
 
+
+
+def run_allstdpca(window=10,stride=10,pca_type = 'pca1'):
+    '''
+    对原数据进行标准化的pca1
+    :param window: 滑动窗口大小，默认为10
+    :param stride: 步长大小，默认为10
+    :param pca_type: 调用哪一个函数，默认为pca1（自己写的）,只能输入'pca1'或者'pca2'
+    :return:无
+    '''
+    bostons = load_boston()
+    data = bostons['data'][:500, -6:]
+    #print(bostons.keys())
+    #print(bostons['DESCR'])
+    pc_list=[]
+    data = standardstep(data)
+    if(pca_type=='pca1'):
+        for i in range(0,len(data),stride):
+            pc_list.append(pca1(data[i:i+window]))
+    elif(pca_type=='pca2'):
+        for i in range(0,len(data),stride):
+            pc_list.append(pca2(data[i:i+window]))
+
+    pc_np = np.array(pc_list).T
+    paint_stack(pc_np,'std '+pca_type)
+    #paint_bar(pc_np,'std '+pca_type)
+
+    #print(pc_np)
+    #print(pc_np.shape)
+
+def run_windowstdpca(window=10,stride=10,pca_type = 'pca1'):
+    '''
+    对原数据进行标准化的pca1
+    :param window: 滑动窗口大小，默认为10
+    :param stride: 步长大小，默认为10
+    :param pca_type: 调用哪一个函数，默认为pca1（自己写的）,只能输入'pca1'或者'pca2'
+    :return:无
+    '''
+    bostons = load_boston()
+    data = bostons['data'][:500, -6:]
+    #print(bostons.keys())
+    #print(bostons['DESCR'])
+    pc_list=[]
+    #data = standardstep(data)
+    if(pca_type=='pca1'):
+        for i in range(0,len(data),stride):
+            pc_list.append(pca1(standardstep(data[i:i+window])))
+    elif(pca_type=='pca2'):
+        for i in range(0,len(data),stride):
+            pc_list.append(pca2(standardstep(data[i:i+window])))
+
+    pc_np = np.array(pc_list).T
+    paint_stack(pc_np,'window std '+pca_type)
+    #paint_bar(pc_np,'std '+pca_type)
+
+    #print(pc_np)
+    #print(pc_np.shape)
+
 def paint_stack(data,pca_type):
     '''
 
@@ -64,7 +123,7 @@ def paint_stack(data,pca_type):
     plt.legend()
 
     #plt.yticks(np.arange(0.5,1,0.1))
-    plt.ylim(0.5,1.05)
+    plt.ylim(0.2,1.05)
 
     plt.xlabel('Index')
     plt.ylabel('Value')
@@ -107,9 +166,9 @@ def paint_bar(data,pca_type):
 
 #main函数
 if __name__=='__main__':
-    run_pca()
-    run_pca(pca_type='pca2')
-
-
-
-
+    #run_pca()
+    #run_pca(pca_type='pca2')
+    run_allstdpca()
+    run_allstdpca(pca_type='pca2')
+    #run_windowstdpca()
+    #run_windowstdpca(pca_type='pca2')
