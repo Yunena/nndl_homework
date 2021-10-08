@@ -13,3 +13,4 @@ Have a happy term.
 ## UPLOADED
 ### Week 2
 - PCA
+- Optimizer
