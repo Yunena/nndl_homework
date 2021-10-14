@@ -14,3 +14,6 @@ Have a happy term.
 ### Week 2
 - PCA
 - Optimizer
+
+### Week 3
+-Naive Bayesian(NO MORE NEED TO SAY.)
