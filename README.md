@@ -16,4 +16,4 @@ Have a happy term.
 - Optimizer
 
 ### Week 3
--Naive Bayesian(NO MORE NEED TO SAY.)
+- Naive Bayesian(NO MORE NEED TO SAY.)
