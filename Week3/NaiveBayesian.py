@@ -1,5 +1,6 @@
 from sklearn.naive_bayes import *
 from sklearn.datasets import make_moons, make_circles, make_classification
+from sklearn.decomposition import PCA
 from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 import numpy as np
@@ -17,6 +18,7 @@ gaus = GaussianNB()
 bern = BernoulliNB()
 muti = MultinomialNB()
 comp = ComplementNB()
+pca = PCA(n_components=2)
 
 moons = make_moons(1000)
 circles = make_circles(1000)
@@ -71,9 +73,11 @@ def data_diff():
     Trx, Tex, Try, Tey = train_test_split(classfication[0], classfication[1], train_size=0.7,shuffle=True)
     gaus = GaussianNB()
     gaus.fit(Trx, Try)
+    pca.fit(Tex,Tey)#降维，方便绘图
+    rdTex = pca.transform(Tex)#降维的结果
     y = gaus.predict(Tex)
     acc = accuracy_score(Tey,y)
-    paint_data_diff(Tex, Tey, y, 'Classfication',acc)
+    paint_data_diff(rdTex, Tey, y, 'Classfication',acc)
     print(acc)
 
 def paint_data_diff(Tex,Tey,y,type,acc):
