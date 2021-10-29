@@ -20,3 +20,7 @@ Have a happy term.
 
 ### Week 4
 - SVM
+
+### Week 5
+- SGD
+- kMeans
