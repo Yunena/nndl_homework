@@ -24,3 +24,6 @@ Have a happy term.
 ### Week 5
 - SGD
 - kMeans
+
+### Week 6
+- SGD+newton+Ada
