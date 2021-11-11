@@ -27,3 +27,6 @@ Have a happy term.
 
 ### Week 6
 - SGD+newton+Ada
+
+### Week7
+- LR+Ridge+Lasso
