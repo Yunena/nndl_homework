@@ -30,3 +30,6 @@ Have a happy term.
 
 ### Week7
 - LR+Ridge+Lasso
+
+### Week8
+- SVM+MLPClassifier
