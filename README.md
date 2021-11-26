@@ -33,3 +33,6 @@ Have a happy term.
 
 ### Week8
 - SVM+MLPClassifier
+
+### Week9
+- FC+CNN_3layers+CNN_11layers(GPU implemented)
