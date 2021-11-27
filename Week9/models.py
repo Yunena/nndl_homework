@@ -8,8 +8,6 @@ import torch.nn as nn
 class FC(nn.Module):
     def __init__(self,layer=3,n_input=784,start_n_hidden=500,n_output=10,rate = 0.8):
         super(FC,self).__init__()
-        self.input_layer=nn.Linear(n_input,start_n_hidden)
-        self.relu = nn.ReLU()
         self.net = nn.Sequential()
         n_hidden = start_n_hidden
         for i in range(layer-1):
@@ -21,8 +19,6 @@ class FC(nn.Module):
 
     def forward(self, x):
         x = x.view(x.size(0), -1)
-        x = self.input_layer(x)
-        x = self.relu(x)
         x = self.net(x)
         out = self.out_layer(x)
         return out
@@ -89,10 +85,3 @@ class CNN_11layers(nn.Module):
 
 
 
-
-'''net = CNN_11layers(out_channel_list=[int(16 * 2 ** int(i/2)) for i in range(11)],kernel_size=7)
-print(net)
-print(sum(p.numel() for p in net.parameters()))
-net = CNN_3layers()
-print(net)
-print(sum(p.numel() for p in net.parameters()))'''
