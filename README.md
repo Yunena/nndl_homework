@@ -36,3 +36,6 @@ Have a happy term.
 
 ### Week9
 - FC+CNN_3layers+CNN_11layers(GPU implemented)
+
+### Final
+- Prediction for weather in Shanghai
